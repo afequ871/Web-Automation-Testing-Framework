@@ -21,6 +21,11 @@ public final class AllTestSuites {
 	private static Logger logger ;
 	
 	public static void main(String[] args) throws InterruptedException {
+		//Get the jvm heap size.
+        long heapSize = Runtime.getRuntime().totalMemory();
+         
+        //Print the jvm heap size.
+        //System.out.println("Heap Size = " + heapSize);
 		AllTestSuites mainClass = new AllTestSuites();	
 		// Optionally remove existing handlers attached to j.u.l root logger
 		SLF4JBridgeHandler.removeHandlersForRootLogger();  // (since SLF4J 1.6.5)
@@ -30,6 +35,7 @@ public final class AllTestSuites {
 		logger = LoggerFactory.getLogger(mainClass.getClass());
 		LogbackFileUtils.start(mainClass.getClass());
 		
+		//logger.info("Heap Size = " + heapSize);
 		logger.info("--------- Web Automation Test Suites ----------");
 		printResults(new LoginLogout().LoginLogout());
 		Thread.sleep(5000);

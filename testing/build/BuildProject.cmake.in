@@ -341,8 +341,8 @@ endmacro()
 
 macro(clean_project)
 #remove project name related files including build and jars
-file (REMOVE_RECURSE "@CMAKE_BINARY_DIR@/${project_name}*")
-file (REMOVE_RECURSE "@CMAKE_BINARY_DIR@/${project_name}_DIR*")
+file (REMOVE_RECURSE "@CMAKE_BINARY_DIR@/${project_name}")
+file (REMOVE_RECURSE "@CMAKE_BINARY_DIR@/${project_name}_DIR")
 file (REMOVE_RECURSE "@CMAKE_BINARY_DIR@/${project_name}.jar")
 
 endmacro()
