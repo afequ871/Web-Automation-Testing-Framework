@@ -27,6 +27,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
@@ -119,14 +120,18 @@ public abstract class AutomatedTestingSuite {
 		
 		//TODO: see if we can get selenium to record all of its events (ie: click, wait, etc) by default
 		
+		FirefoxProfile profile = new FirefoxProfile();
+		profile.setAcceptUntrustedCertificates(true);
+		profile.setAssumeUntrustedCertificateIssuer(false);
 		//Setup selenium logger
 		DesiredCapabilities caps = DesiredCapabilities.firefox(); 
 		LoggingPreferences logs = new LoggingPreferences(); 
 		logs.enable(LogType.DRIVER, Level.ALL); 
-		caps.setCapability(CapabilityType.LOGGING_PREFS, logs); 
+		caps.setCapability(CapabilityType.LOGGING_PREFS, logs);
+		caps.setCapability(FirefoxDriver.PROFILE, profile);
+		caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		driver = new FirefoxDriver(caps);
-		driver.manage().window().maximize();
-		
+		driver.manage().window().maximize();		 
 		
 		s = new Screen();
 		try {

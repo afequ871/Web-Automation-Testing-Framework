@@ -38,11 +38,6 @@ public class Profile extends AutomatedTestingSuite {
 
 			Profile.updateAddress(profileTemp);
 			r.delay(5000);
-			
-		    // Go back to dashboard
-		    //driver.switchTo().defaultContent();
-		    //driver.findElement(By.id("dashboard")).click();	    
-		    //r.delay(5000);
 		    
 		    //Logout
 		    LoginLogout.logout();		    

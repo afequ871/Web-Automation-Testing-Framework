@@ -6,13 +6,13 @@
 	<classpathentry exported="true" kind="lib" path="lib/logback-classic-1.0.7.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/logback-core-1.0.7.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/javax.mail.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/selenium-java-2.32.0-srcs.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/selenium-java-2.32.0.jar" sourcepath="lib/selenium-java-2.32.0-srcs.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/selenium-server-standalone-2.32.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jul-to-slf4j-1.7.5-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jul-to-slf4j-1.7.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/slf4j-api-1.7.5-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/slf4j-api-1.7.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/sikuli-java.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/selenium-java-2.37.0-srcs.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/selenium-java-2.37.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/selenium-server-standalone-2.37.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
